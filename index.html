@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    </head>
+    <body>
+        {{range .}}
+        <h3>{{.Name}}<h3>
+        <pre>
+            <code class="golang">{{.Content}}</code>
+        </pre>
+        {{end}}
+        <script src="./highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
