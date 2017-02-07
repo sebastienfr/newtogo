@@ -19,6 +19,7 @@ type example struct {
 var Examples []example
 
 func loadExamples() {
+	Examples = []example{}
 	files, _ := ioutil.ReadDir("./examples")
 	for _, f := range files {
 		b, err := ioutil.ReadFile("./examples/" + f.Name()) // just pass the file name
@@ -38,11 +39,11 @@ func loadExamples() {
 
 func main() {
 
-	loadExamples()
-
 	http.Handle("/", http.FileServer(http.Dir("./html")))
 
 	http.HandleFunc("/index.html", func(w http.ResponseWriter, r *http.Request) {
+
+		loadExamples()
 
 		t, err := template.ParseFiles("index.html")
 
