@@ -1,7 +1,11 @@
 package main
 
+import "fmt"
+
 var foo = true
 
-if foo {
-	fmt.Println("Foo is true")
+func main() {
+	if foo {
+		fmt.Println("Foo is true")
+	}
 }
