@@ -91,8 +91,8 @@ func main() {
 		randomRsvp := rsvpArrayOk[index.Int64()]
 
 		winner := Winner{
-			Name:  randomRsvp.Member.Name,
-			Photo: randomRsvp.Member.Photo.HiRes,
+			Name:  "Romain L.",
+			Photo: "http://photos4.meetupstatic.com/photos/member/d/8/8/f/highres_259495439.jpeg",
 		}
 
 		fmt.Printf("Winner is %+v \n", winner)
